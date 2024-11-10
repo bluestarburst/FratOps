@@ -27,12 +27,12 @@ export default function MemberTable({
     users,
     selectedKeys,
     setSelectedKeys,
-    setSelectedUser,
+    // setSelectedUser,
 }: {
     users: User[];
     selectedKeys: Selection;
     setSelectedKeys: React.Dispatch<React.SetStateAction<Selection>>;
-    setSelectedUser: React.Dispatch<React.SetStateAction<User | null>>;
+    // setSelectedUser: React.Dispatch<React.SetStateAction<User | null>>;
 }) {
     const [filterValue, setFilterValue] = React.useState("");
 
@@ -114,7 +114,7 @@ export default function MemberTable({
             case "status":
                 return (
                     <Chip className="capitalize" color={statusColorMap[user.status]} size="sm" variant="flat">
-                        {cellValue}
+                        {statusOptions.find((status) => status.uid === user.status)?.name}
                     </Chip>
                 );
             case "actions":
@@ -293,7 +293,7 @@ export default function MemberTable({
             bottomContent={bottomContent}
             bottomContentPlacement="outside"
             classNames={{
-                // wrapper: "max-h-[382px]",
+                // wrapper: "min-w-max",
             }}
             selectedKeys={selectedKeys}
             selectionMode="multiple"
@@ -319,7 +319,7 @@ export default function MemberTable({
                     <TableRow key={item.id}>
                         {(columnKey) => <TableCell
                             className="cursor-pointer"
-                            onClick={() => setSelectedUser(item)}
+                            // onClick={() => setSelectedUser(item)}
 
                         >{renderCell(item, columnKey)}</TableCell>}
                     </TableRow>

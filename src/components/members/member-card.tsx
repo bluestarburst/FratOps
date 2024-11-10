@@ -10,7 +10,7 @@ export default function MemberCard({
 }: {
     selectedUser: User | null;
 }) {
-    return (<Card className="max-w-[400px] h-max">
+    return (<Card className="h-max w-max animate-fade-in min-h-max min-w-max">
         <CardHeader className="flex gap-3">
             <Image
                 alt="nextui logo"
@@ -25,7 +25,7 @@ export default function MemberCard({
             </div>
         </CardHeader>
         <Divider />
-        <CardBody>
+        <CardBody className="h-max overflow-hidden">
             <p>Make beautiful websites regardless of your design experience.</p>
         </CardBody>
         <Divider />
