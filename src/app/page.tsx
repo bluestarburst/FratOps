@@ -1,8 +1,8 @@
 
-import Members from "@/components/pages/members";
+import HomePage from "@/components/pages/home";
 
 export default function Home() {
   return (
-    <Members />
+    <HomePage />
   );
 }

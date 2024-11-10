@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faGoogle, faMicrosoft } from "@fortawesome/free-brands-svg-icons";
 import { Bounce, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useRouter } from "next/navigation";
 // import BackToHome from "./misc/back-home";
 
 export const firebaseErrorDict: {
@@ -30,7 +31,7 @@ export default function Login() {
         debug
     } = useContext(FirebaseContext);
 
-    // const router = useRouter();
+    const router = useRouter();
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -194,7 +195,7 @@ export default function Login() {
 
         if (currentUser) {
             console.log("User", currentUser.displayName);
-            // router.push("/dashboard");
+            router.push("/");
         }
 
     }, [currentUser]);
