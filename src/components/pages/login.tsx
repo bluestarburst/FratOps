@@ -1,7 +1,7 @@
 "use client";
 
 import { Button, Card, CardBody, Input, Link } from "@nextui-org/react";
-import { getRedirectResult, GithubAuthProvider, GoogleAuthProvider, OAuthProvider, sendEmailVerification, signInWithEmailAndPassword, signInWithPopup, signInWithRedirect } from "firebase/auth";
+import { getRedirectResult, GoogleAuthProvider, sendEmailVerification, signInWithEmailAndPassword, signInWithPopup, signInWithRedirect } from "firebase/auth";
 import { useContext, useEffect, useRef, useState } from "react";
 import { FirebaseContext } from "../context/firebase-context";
 // import { useRouter } from "next/navigation";
@@ -80,57 +80,57 @@ export default function Login() {
         }
     }
 
-    function github() {
+    // function github() {
 
-        if (!auth) {
-            return;
-        }
+    //     if (!auth) {
+    //         return;
+    //     }
 
-        console.log("Login");
+    //     console.log("Login");
 
-        // login with google using firebase
-        const provider = new GithubAuthProvider();
+    //     // login with google using firebase
+    //     const provider = new GithubAuthProvider();
 
-        if (debug) {
-            signInWithPopup(auth, provider)
-                .then((result) => {
-                    console.log("Login success", result);
-                })
-                .catch((error) => {
-                    console.log("Login error", error);
+    //     if (debug) {
+    //         signInWithPopup(auth, provider)
+    //             .then((result) => {
+    //                 console.log("Login success", result);
+    //             })
+    //             .catch((error) => {
+    //                 console.log("Login error", error);
 
-                    toastError(error);
-                });
-        } else {
-            signInWithRedirect(auth, provider)
-        }
-    }
+    //                 toastError(error);
+    //             });
+    //     } else {
+    //         signInWithRedirect(auth, provider)
+    //     }
+    // }
 
-    function microsoft() {
+    // function microsoft() {
 
-        if (!auth) {
-            return;
-        }
+    //     if (!auth) {
+    //         return;
+    //     }
 
-        console.log("Login");
+    //     console.log("Login");
 
-        // login with google using firebase
-        const provider = new OAuthProvider("microsoft.com");
+    //     // login with google using firebase
+    //     const provider = new OAuthProvider("microsoft.com");
 
-        if (debug) {
-            signInWithPopup(auth, provider)
-                .then((result) => {
-                    console.log("Login success", result);
-                })
-                .catch((error) => {
-                    console.log("Login error", error);
+    //     if (debug) {
+    //         signInWithPopup(auth, provider)
+    //             .then((result) => {
+    //                 console.log("Login success", result);
+    //             })
+    //             .catch((error) => {
+    //                 console.log("Login error", error);
 
-                    toastError(error);
-                });
-        } else {
-            signInWithRedirect(auth, provider)
-        }
-    }
+    //                 toastError(error);
+    //             });
+    //     } else {
+    //         signInWithRedirect(auth, provider)
+    //     }
+    // }
 
     async function emailSignIn() {
         if (!auth) {

@@ -39,18 +39,29 @@ export default function FirebaseContextProvider({
 
 	useEffect(() => {
 
+		// const firebaseConfig = {
+		// 	apiKey: "AIzaSyBCULGVk0Fw8gIxMTDzewEE29HzYkQLIrc",
+		// 	// authDomain: "tensorboard--tensorboard-234f6.us-central1.hosted.app",
+		// 	authDomain: "tensorboard.vercel.app",
+		// 	// authDomain: "localhost:3000",
+		// 	// authDomain: hostname,
+		// 	projectId: "tensorboard-234f6",
+		// 	storageBucket: "tensorboard-234f6.appspot.com",
+		// 	messagingSenderId: "815212794853",
+		// 	appId: "1:815212794853:web:44da2542e8c4622793d50c",
+		// 	measurementId: "G-X0RSFV0Y3Y",
+		// };
+
+
 		const firebaseConfig = {
-			apiKey: "AIzaSyBCULGVk0Fw8gIxMTDzewEE29HzYkQLIrc",
-			// authDomain: "tensorboard--tensorboard-234f6.us-central1.hosted.app",
-			authDomain: "tensorboard.vercel.app",
-			// authDomain: "localhost:3000",
-			// authDomain: hostname,
-			projectId: "tensorboard-234f6",
-			storageBucket: "tensorboard-234f6.appspot.com",
-			messagingSenderId: "815212794853",
-			appId: "1:815212794853:web:44da2542e8c4622793d50c",
-			measurementId: "G-X0RSFV0Y3Y",
-		};
+			apiKey: "AIzaSyAYCVWG-Bq8KYCYzLOkGX0mZwtYPVS_JDg",
+			authDomain: "fratops.vercel.app",
+			projectId: "fratops-6a6cf",
+			storageBucket: "fratops-6a6cf.firebasestorage.app",
+			messagingSenderId: "1054335739306",
+			appId: "1:1054335739306:web:2097da181ed2141918b7d3",
+			measurementId: "G-QGGTRQV4DG"
+		  };
 
 		// // Initialize Firebase
 		const app = initializeApp(firebaseConfig);
