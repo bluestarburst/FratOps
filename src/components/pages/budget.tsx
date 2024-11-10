@@ -33,7 +33,7 @@ export default function Budget() {
 
     return (
         <div className="w-full flex flex-row justify-center">
-            <div className="space-y-8 max-w-[1000px] py-12">
+            <div className="space-y-8 max-w-[1000px] w-full py-12">
                 {/* Summary Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <Card>
